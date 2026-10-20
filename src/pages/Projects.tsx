@@ -40,7 +40,7 @@ export default function Projects() {
         <main className="projects container">
             <header className="projects-header">
                 <p className="lead">MY WORK</p>
-                <h1>Projects</h1>
+                <h1 className="page-title">Projects</h1>
                 <p className="page-intro">
                     Here you can find a selection of my personal and school projects. 
                     Each project showcases my skills, knowledge, and experience in software development. 

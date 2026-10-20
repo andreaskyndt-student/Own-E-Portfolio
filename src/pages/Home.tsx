@@ -5,7 +5,7 @@ export default function Home() {
         <section className="home container">
             <p className="lead">WELCOME TO MY PORTFOLIO!</p>
 
-            <h1>
+            <h1 className="page-title">
                 Hello, my name is <span>Andreas Kyndt.</span>
             </h1>
 

@@ -5,7 +5,7 @@ export default function Contact() {
         <section className="contact container">
             <p className="lead">GET IN TOUCH WITH ME!</p>
 
-            <h1>Contact</h1>
+            <h1 className="page-title">Contact</h1>
 
             <p className="page-intro">
                 If you have any questions, suggestions, or would like to collaborate on a 

@@ -11,7 +11,7 @@ export default function AboutMe() {
         <section className="about-me container">
             <p className="lead">WHO AM I?</p>
 
-            <h1>About Me</h1>
+            <h1 className="page-title">About Me</h1>
 
             <p className="page-intro">
                 I am Andreas Kyndt, a motivated last year student in the field of software

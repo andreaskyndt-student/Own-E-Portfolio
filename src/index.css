@@ -14,6 +14,27 @@
   --border: #e7eaf0;
 }
 
+/* Shared page heading styles */
+
+.page-title {
+    margin: 0 0 24px;
+    color: #172033;
+    font-size: clamp(2.5rem, 6vw, 4.75rem);
+    line-height: 1.1;
+    letter-spacing: -0.055em;
+    font-weight: 800;
+}
+
+@media (max-width: 600px) {
+    .page-title {
+        font-size: clamp(2.4rem, 11vw, 3.5rem);
+    }
+}
+
+h2 {
+  font-weight: 800;
+}
+
 * {
   box-sizing: border-box;
 }
