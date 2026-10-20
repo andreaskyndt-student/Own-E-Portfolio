@@ -75,7 +75,7 @@ export default function EventCard({
                                 {photos.map((photo, index) => (
                                     <img
                                         key={photo}
-                                        src={`${import.meta.env.BASE_URL}${photo}`}
+                                        src={photo}
                                         alt={`${title} - gallery photo ${index + 1}`}
                                         loading="lazy"
                                     />
