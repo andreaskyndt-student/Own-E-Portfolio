@@ -1,5 +1,9 @@
 import EventCard from "../components/events/EventCard";
 
+import photo1 from "../assets/howest_stagemarkt_picture1.jpg";
+import photo2 from "../assets/howest_stagemarkt_picture2.jpg";
+import photo3 from "../assets/howest_stagemarkt_picture3.jpg";
+
 const eventsData = [
     {
         title: "Howest StageMarket 2026",
@@ -9,9 +13,9 @@ const eventsData = [
         description: "Howest StageMarket is an event organized by Howest to help students find internships and job opportunities. It provides a platform for students to connect with potential employers, learn about different companies, and explore career paths.",
         learning: "I learned a lot about networking, career development, and how to present myself to potential employers. I also learned how to make the most out of an event like this, and how to approach companies and ask questions.",
         photos: [
-            "src/assets/howest_stagemarkt_picture1.jpg",
-            "src/assets/howest_stagemarkt_picture2.jpg",
-            "src/assets/howest_stagemarkt_picture3.jpg",
+            photo1,
+            photo2,
+            photo3,
         ]
     }
 ];
