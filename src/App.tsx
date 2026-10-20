@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
+import Events from "./pages/Events";
 
 export default function App() {
     return (
@@ -17,6 +18,7 @@ export default function App() {
             <Route path="/aboutme" element={<AboutMe />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/events" element={<Events />} />
 
           <Route path="*" element={
             <section className="not-found">
