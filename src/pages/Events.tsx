@@ -3,6 +3,9 @@ import EventCard from "../components/events/EventCard";
 import photo1 from "../assets/howest_stagemarkt_picture1.jpg";
 import photo2 from "../assets/howest_stagemarkt_picture2.jpg";
 import photo3 from "../assets/howest_stagemarkt_picture3.jpg";
+import photo4 from "../assets/orbid_event_photo1.jpg";
+import photo5 from "../assets/orbid_event_photo2.jpg";
+import photo6 from "../assets/orbid_event_photo3.jpg";
 
 const eventsData = [
     {
@@ -16,6 +19,19 @@ const eventsData = [
             photo1,
             photo2,
             photo3,
+        ]
+    },
+    {
+        title: "Orbid Young Potentials Classes",
+        date: "22/10/2025",
+        location: "O'Leary's Gent",
+        topics: ["AI integration", "Software Development", "C#", "Networking", ".NET"],
+        description: "The Orbid Young Potentials Classes at O'Leary's in Ghent brought together young software developers to expand their knowledge, gain insights, and exchange experiences with others in the IT sector. The event offered an interesting combination of practical knowledge, and networking opportunities. During the event, I attended the session AI Development in C# (.NET), which focused on the possibilities of artificial intelligence in software development. We gained a better understanding of how Orbid integrates AI into its software solutions, and how this technology can be used to support its clients. An example of this was the garbage collection system in Ghent, which uses AI to let people know immediately why their garbage collection was not successful. The session also highlighted the importance of knowing what you are doing when working with AI, and how to avoid common pitfalls. The session was presented by Wolf Roels, who has been working at Orbid for a few years. With his enthiousiast approach, he managed to keep us engaged throughout the session. After the presentation there was some time to network with fellow students and Orbid employees. Overall, the event was a great opportunity to learn from experts in the field, and to connect with other young software developers.",
+        learning: "I learned more about the company Orbid, and how they integrate AI into their software solutions. I also learned more about the possibilities of AI in software development, and how to avoid common pitfalls when working with AI. For example AI hallucinations can occur when the prompt is not properly formulated. Additionally, I gained some valuable networking experience, and made some new connections in the IT sector.",
+        photos: [
+            photo4,
+            photo5,
+            photo6,
         ]
     }
 ];
