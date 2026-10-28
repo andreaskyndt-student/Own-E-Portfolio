@@ -22,6 +22,20 @@ export default function Home() {
                     About Me
                 </Link>
             </div>
+
+            <section className="posts container">
+                <div className="post how-it-is-built">
+                    <h2>How is my portfolio built?</h2>
+                    <p>
+                        My portfolio is built using React, a JavaScript library for building
+                        user interfaces. I used Vite as a build tool to set up the project quickly
+                        and efficiently. GitHub Pages is used to host the portfolio, making it
+                        easy to share and showcase my work. I use a simple pipeline to build and deploy
+                        the portfolio. Every time I push changes to the main branch, the pipeline
+                        automatically builds the project and deploys it.
+                    </p>
+                </div>
+            </section>
         </section>
     )
 }
