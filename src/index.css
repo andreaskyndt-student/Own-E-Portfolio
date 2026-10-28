@@ -321,14 +321,13 @@ button {
     align-self: start;
     overflow: hidden;
     transition: border-color var(--transition),
-                box-shadow var(--transition),
-                transform var(--transition);
+                box-shadow var(--transition);
 }
 
-.info-card:hover {
-    border-color: var(--accent);
-    box-shadow: 0 8px 24px rgb(30 50 90 / 8%);
-    transform: translateY(-2px);
+.info-card:hover,
+.info-card.expanded {
+    border-color: #d4dcfb;
+    box-shadow: 0 8px 28px rgb(25 42 80 / 6%);
 }
 
 .info-card-toggle {
@@ -337,7 +336,7 @@ button {
     justify-content: space-between;
     gap: 16px;
     width: 100%;
-    padding: 28px;
+    padding: 24px;
     border: none;
     background: transparent;
     color: inherit;
@@ -352,13 +351,11 @@ button {
     border-radius: var(--card-radius);
 }
 
-.info-card-text {
+.info-card-main {
     display: flex;
-    flex: 1;
-    min-width: 0;
-    flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 16px;
+    min-width: 0;
 }
 
 .info-card-icon-box,
@@ -372,57 +369,50 @@ button {
 }
 
 .info-card-icon-box {
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+}
+
+.info-card-heading {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 2px;
 }
 
 .info-card-title {
-    margin: 4px 0 0;
     color: var(--text);
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 1.4;
+    font-size: 1.05rem;
+    font-weight: 650;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
 }
 
 .info-card-description {
     margin: 0;
-    padding-right: 4px;
-    color: var(--body-text);
-    font-size: 0.96rem;
-    line-height: 1.8;
-    overflow-wrap: break-word;
-}
-
-.info-card-expand {
-    display: flex !important;
-    flex: 0 0 34px;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    padding: 0;
-    border: none;
-    border-radius: 50%;
-    background: var(--accent) !important;
-    color: #fff !important;
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1;
-    text-align: center;
-    transition: background-color 180ms ease;
-}
-
-.info-card-toggle:hover .info-card-expand {
-    background: var(--accent-hover) !important;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
 }
 
 .info-card-details {
-    padding: 0 28px 28px;
+    padding: 20px 24px 24px;
+    border-top: 1px solid var(--border);
     color: var(--body-text);
-    font-size: 0.96rem;
+    font-size: 0.9rem;
     line-height: 1.8;
     overflow-wrap: break-word;
+    animation: reveal 0.2s ease;
+}
+
+.info-card.expanded .project-card-chevron {
+    color: var(--accent);
+}
+
+.info-card-toggle:hover .info-card-title {
+    color: var(--accent);
 }
 
 .info-card-details p {
@@ -610,6 +600,10 @@ button {
     color: var(--accent);
 }
 
+.event-card.expanded .project-card-chevron {
+    color: var(--accent);
+}
+
 .project-card-chevron.rotated {
     transform: rotate(180deg);
 }
@@ -712,8 +706,7 @@ button {
 .event-card {
     overflow: hidden;
     transition: border-color var(--transition),
-                box-shadow var(--transition),
-                transform var(--transition);
+                box-shadow var(--transition);
 }
 
 .event-card:hover,
@@ -722,14 +715,10 @@ button {
     box-shadow: 0 8px 28px rgb(25 42 80 / 6%);
 }
 
-.event-card:hover {
-    transform: translateY(-2px);
-}
-
 .event-card-toggle {
     display: block;
     width: 100%;
-    padding: 28px;
+    padding: 24px;
     border: none;
     background: transparent;
     color: inherit;
@@ -786,33 +775,6 @@ button {
     flex-shrink: 0;
     color: var(--accent);
     font-size: 1.1rem;
-}
-
-.event-chevron {
-    display: grid;
-    flex-shrink: 0;
-    place-items: center;
-    width: 36px;
-    height: 36px;
-    margin-top: 4px;
-    border-radius: 50%;
-    background: var(--soft-blue);
-    color: var(--accent);
-    font-size: 1.2rem;
-    transition: transform var(--transition),
-                background-color var(--transition),
-                color var(--transition);
-}
-
-.event-chevron.rotated {
-    transform: rotate(180deg);
-    background: var(--accent);
-    color: #fff;
-}
-
-.event-card-toggle:hover .event-chevron {
-    background: var(--accent);
-    color: #fff;
 }
 
 .event-topics {
@@ -954,12 +916,8 @@ button {
         margin-top: 32px;
     }
 
-    .info-card-toggle {
-        padding: 22px;
-    }
-
     .info-card-details {
-        padding: 0 22px 22px;
+        padding: 20px 22px 22px;
     }
 
     .contact-details {
@@ -1076,6 +1034,14 @@ button {
 }
 
 @media (max-width: 480px) {
+    .info-card-toggle {
+        padding: 18px;
+    }
+
+    .info-card-details {
+        padding: 18px 18px 20px;
+    }
+
     .events {
         padding-top: 36px;
         padding-bottom: 48px;
@@ -1116,12 +1082,6 @@ button {
 
     .event-location {
         font-size: 0.86rem;
-    }
-
-    .event-chevron {
-        width: 32px;
-        height: 32px;
-        font-size: 1rem;
     }
 
     .event-topics {

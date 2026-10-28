@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 type EventCardProps = {
     title: string;
@@ -38,12 +39,11 @@ export default function EventCard({
                         </p>
                     </div>
 
-                    <span
-                        className={`event-chevron ${isExpanded ? "rotated" : ""}`}
+                    <ChevronDown
+                        size={20}
+                        className={`project-card-chevron ${isExpanded ? "rotated" : ""}`}
                         aria-hidden="true"
-                    >
-                        ↓
-                    </span>
+                    />
                 </div>
 
                 <div className="event-topics">
