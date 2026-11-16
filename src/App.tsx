@@ -1,4 +1,3 @@
-import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -13,20 +12,11 @@ export default function App() {
         <Navbar />
 
         <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/aboutme" element={<AboutMe />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/events" element={<Events />} />
-
-          <Route path="*" element={
-            <section className="not-found">
-              <h1>Page Not Found</h1>
-              <p>The page you are looking for does not exist.</p>
-            </section>
-            } />
-          </Routes>
+          <Home />
+          <AboutMe />
+          <Projects />
+          <Events />
+          <Contact />
         </main>
 
         <Footer />

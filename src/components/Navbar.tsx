@@ -1,33 +1,58 @@
-import {NavLink} from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const links = [
-    { to: "/", label: "Home", end:true },
-    { to: "/aboutme", label: "About Me" },
-    { to: "/projects", label: "Projects" },
-    { to: "/events", label: "Events" },
-    { to: "/contact", label: "Contact" }
+    { to: "#home", label: "Home" },
+    { to: "#aboutme", label: "About Me" },
+    { to: "#projects", label: "Projects" },
+    { to: "#events", label: "Events" },
+    { to: "#contact", label: "Contact" }
 ];
 
 export default function Navbar() {
+    const [activeSection, setActiveSection] = useState("home");
+
+    useEffect(() => {
+        const updateActiveSection = () => {
+            const marker = window.scrollY + window.innerHeight * 0.35;
+            let current = "home";
+
+            for (const link of links) {
+                const section = document.getElementById(link.to.slice(1));
+                if (section && section.offsetTop <= marker) {
+                    current = section.id;
+                }
+            }
+
+            setActiveSection(current);
+        };
+
+        updateActiveSection();
+        window.addEventListener("scroll", updateActiveSection, { passive: true });
+        window.addEventListener("resize", updateActiveSection);
+
+        return () => {
+            window.removeEventListener("scroll", updateActiveSection);
+            window.removeEventListener("resize", updateActiveSection);
+        };
+    }, []);
+
     return (
         <header className="site-header">
             <nav className="navbar container" aria-label="Main navigation">
-                <NavLink to="/" className="brand" aria-label="Homepage">
+                <a href="#home" className="brand" aria-label="Homepage">
                     Andreas Kyndt's Portfolio
-                </NavLink>
+                </a>
 
                 <div className="nav-links">
                     {links.map((link) => (
-                        <NavLink
+                        <a
                             key={link.to}
-                            to={link.to}
-                            end={link.end}
-                            className={({ isActive }) =>
-                                isActive ? "nav-link active" : "nav-link"
-                            }
+                            href={link.to}
+                            className={`nav-link ${activeSection === link.to.slice(1) ? "active" : ""}`}
+                            aria-current={activeSection === link.to.slice(1) ? "location" : undefined}
                         >
                             {link.label}
-                        </NavLink>
+                        </a>
                     ))}
                 </div>
             </nav>

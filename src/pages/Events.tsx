@@ -54,7 +54,7 @@ const eventsData = [
 
 export default function Events() {
     return (
-        <main className="events container">
+        <section id="events" className="events container">
             <header className="events-header">
                 <p className="lead">MY EXPERIENCES</p>
                 <h1 className="page-title">Events & Experiences</h1>
@@ -81,6 +81,6 @@ export default function Events() {
                     ))}
                 </div>
             </section>
-        </main>
+        </section>
     );
 }

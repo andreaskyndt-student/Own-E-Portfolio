@@ -37,7 +37,7 @@ const schoolProjects = [
 
 export default function Projects() {
     return (
-        <main className="projects container">
+        <section id="projects" className="projects container">
             <header className="projects-header">
                 <p className="lead">MY WORK</p>
                 <h1 className="page-title">Projects</h1>
@@ -76,6 +76,6 @@ export default function Projects() {
                     ))}
                 </div>
             </section>
-        </main>
+        </section>
     );
 }

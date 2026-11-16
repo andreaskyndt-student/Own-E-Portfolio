@@ -1,8 +1,6 @@
-import {Link} from "react-router-dom";
-
 export default function Home() {
     return (
-        <section className="home container">
+        <section id="home" className="home container">
             <p className="lead">WELCOME TO MY PORTFOLIO!</p>
 
             <h1 className="page-title">
@@ -15,12 +13,12 @@ export default function Home() {
             </p>
 
             <div className="home-actions">
-                <Link to="/projects" className="btn btn-primary">
+                <a href="#projects" className="btn btn-primary">
                     View Projects
-                </Link>
-                <Link to="/aboutme" className="btn btn-secondary">
+                </a>
+                <a href="#aboutme" className="btn btn-secondary">
                     About Me
-                </Link>
+                </a>
             </div>
 
             <section className="posts container">
@@ -29,10 +27,30 @@ export default function Home() {
                     <p>
                         My portfolio is built using React, a JavaScript library for building
                         user interfaces. I used Vite as a build tool to set up the project quickly
-                        and efficiently. GitHub Pages is used to host the portfolio, making it
-                        easy to share and showcase my work. I use a simple pipeline to build and deploy
-                        the portfolio. Every time I push changes to the main branch, the pipeline
-                        automatically builds the project and deploys it.
+                        and efficiently. Cloudflare Pages is used to host the portfolio, making it
+                        easy to share and showcase my work. It is really easy to connect your GitHub
+                        repository to a Cloudflare Pages site. Every time I push changes to the 
+                        main branch of my GitHub repository, Cloudflare Pages automatically rebuilds and deploys 
+                        the site, ensuring that the latest version is always live.
+                    </p>
+                </div>
+                <div className="post why-event-storming">
+                    <h2>Why is the website based on event storming?</h2>
+                    <p>You can see the different post-its used in this website, each with a
+                        different color. In a lesson from my domain-driven design course, we 
+                        used a technique called event storming to visualize
+                        the different events and processes of a system. It was a really fun and
+                        engaging way to learn about the core of the system. This is why I wanted
+                        to use this technique in my portfolio. Each color has its own meaning, but
+                        it is explained in the legend of the website.
+                    </p>
+                </div>
+                <div className="post what-am-i-doing-currently">
+                    <h2>What am I doing currently?</h2>
+                    <p>
+                        I am currently working on two personal projects. The first one is a zoo
+                        management system (ZooFix), and the second one is a speach-to-summary application
+                        (Recap), where I learn how to use open-source AI models to summarize text.
                     </p>
                 </div>
             </section>

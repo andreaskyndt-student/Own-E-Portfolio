@@ -2,7 +2,7 @@ import { Mail, Phone } from "lucide-react";
 
 export default function Contact() {
     return (
-        <section className="contact container">
+        <section id="contact" className="contact container">
             <p className="lead">GET IN TOUCH WITH ME!</p>
 
             <h1 className="page-title">Contact</h1>

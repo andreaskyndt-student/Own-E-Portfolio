@@ -8,7 +8,7 @@ import {
 
 export default function AboutMe() {
     return (
-        <section className="about-me container">
+        <section id="aboutme" className="about-me container">
             <p className="lead">WHO AM I?</p>
 
             <h1 className="page-title">About Me</h1>

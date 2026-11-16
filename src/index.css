@@ -1,5 +1,5 @@
 :root {
-    font-family: "Kalam", "Comic Sans MS", cursive;
+    font-family: "Nunito", sans-serif;
     color: #172033;
     background: #fff;
     font-synthesis: none;
@@ -27,6 +27,18 @@ body {
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#home,
+#aboutme,
+#projects,
+#events,
+#contact {
+    scroll-margin-top: 100px;
 }
 
 a {
@@ -88,6 +100,19 @@ button {
     border-radius: var(--card-radius);
 }
 
+.info-card,
+.info-card *,
+.project-card,
+.project-card *,
+.event-card,
+.event-card *,
+.contact-item,
+.contact-item *,
+.post,
+.post * {
+    font-family: "Kalam", "Comic Sans MS", cursive;
+}
+
 .site-header {
     position: sticky;
     top: 0;
@@ -141,64 +166,64 @@ button {
     background: var(--soft-blue);
 }
 
-/* Green navigation and footer interactions while the About Me route is active. */
-body:has(.nav-link.active[href="/aboutme"]) .nav-link:hover,
-body:has(.nav-link.active[href="/aboutme"]) .nav-link.active {
+/* Navigation and footer accents follow the section currently in view. */
+body:has(.nav-link.active[href="#aboutme"]) .nav-link:hover,
+body:has(.nav-link.active[href="#aboutme"]) .nav-link.active {
     color: #426b2d;
     background: #edf8dc;
 }
 
-body:has(.nav-link.active[href="/projects"]) .nav-link:hover,
-body:has(.nav-link.active[href="/projects"]) .nav-link.active {
+body:has(.nav-link.active[href="#projects"]) .nav-link:hover,
+body:has(.nav-link.active[href="#projects"]) .nav-link.active {
     color: #2348c5;
     background: #e5ebff;
 }
 
-body:has(.nav-link.active[href="/events"]) .nav-link:hover,
-body:has(.nav-link.active[href="/events"]) .nav-link.active {
+body:has(.nav-link.active[href="#events"]) .nav-link:hover,
+body:has(.nav-link.active[href="#events"]) .nav-link.active {
     color: #a64b12;
     background: #fff0dc;
 }
 
-body:has(.nav-link.active[href="/contact"]) .nav-link:hover,
-body:has(.nav-link.active[href="/contact"]) .nav-link.active {
+body:has(.nav-link.active[href="#contact"]) .nav-link:hover,
+body:has(.nav-link.active[href="#contact"]) .nav-link.active {
     color: #806b16;
     background: #fff8d9;
 }
 
-body:has(.nav-link.active[href="/"]) .nav-link:hover,
-body:has(.nav-link.active[href="/"]) .nav-link.active {
+body:has(.nav-link.active[href="#home"]) .nav-link:hover,
+body:has(.nav-link.active[href="#home"]) .nav-link.active {
     color: #6840a8;
     background: #f0e8ff;
 }
 
-body:has(.nav-link.active[href="/aboutme"]) .nav-link:focus-visible,
-body:has(.nav-link.active[href="/aboutme"]) .brand:focus-visible,
-body:has(.nav-link.active[href="/aboutme"]) .footer-social-button:focus-visible {
+body:has(.nav-link.active[href="#aboutme"]) .nav-link:focus-visible,
+body:has(.nav-link.active[href="#aboutme"]) .brand:focus-visible,
+body:has(.nav-link.active[href="#aboutme"]) .footer-social-button:focus-visible {
     outline-color: rgb(66 107 45 / 35%);
 }
 
-body:has(.nav-link.active[href="/projects"]) .nav-link:focus-visible,
-body:has(.nav-link.active[href="/projects"]) .brand:focus-visible,
-body:has(.nav-link.active[href="/projects"]) .footer-social-button:focus-visible {
+body:has(.nav-link.active[href="#projects"]) .nav-link:focus-visible,
+body:has(.nav-link.active[href="#projects"]) .brand:focus-visible,
+body:has(.nav-link.active[href="#projects"]) .footer-social-button:focus-visible {
     outline-color: rgb(49 91 234 / 35%);
 }
 
-body:has(.nav-link.active[href="/events"]) .nav-link:focus-visible,
-body:has(.nav-link.active[href="/events"]) .brand:focus-visible,
-body:has(.nav-link.active[href="/events"]) .footer-social-button:focus-visible {
+body:has(.nav-link.active[href="#events"]) .nav-link:focus-visible,
+body:has(.nav-link.active[href="#events"]) .brand:focus-visible,
+body:has(.nav-link.active[href="#events"]) .footer-social-button:focus-visible {
     outline-color: rgb(166 75 18 / 35%);
 }
 
-body:has(.nav-link.active[href="/contact"]) .nav-link:focus-visible,
-body:has(.nav-link.active[href="/contact"]) .brand:focus-visible,
-body:has(.nav-link.active[href="/contact"]) .footer-social-button:focus-visible {
+body:has(.nav-link.active[href="#contact"]) .nav-link:focus-visible,
+body:has(.nav-link.active[href="#contact"]) .brand:focus-visible,
+body:has(.nav-link.active[href="#contact"]) .footer-social-button:focus-visible {
     outline-color: rgb(128 107 22 / 40%);
 }
 
-body:has(.nav-link.active[href="/"]) .nav-link:focus-visible,
-body:has(.nav-link.active[href="/"]) .brand:focus-visible,
-body:has(.nav-link.active[href="/"]) .footer-social-button:focus-visible {
+body:has(.nav-link.active[href="#home"]) .nav-link:focus-visible,
+body:has(.nav-link.active[href="#home"]) .brand:focus-visible,
+body:has(.nav-link.active[href="#home"]) .footer-social-button:focus-visible {
     outline-color: rgb(104 64 168 / 40%);
 }
 
@@ -257,31 +282,31 @@ body:has(.nav-link.active[href="/"]) .footer-social-button:focus-visible {
     transform: translateY(-2px);
 }
 
-body:has(.nav-link.active[href="/aboutme"]) .footer-social-button:hover {
+body:has(.nav-link.active[href="#aboutme"]) .footer-social-button:hover {
     color: #426b2d;
     background: #edf8dc;
     border-color: #7da955;
 }
 
-body:has(.nav-link.active[href="/projects"]) .footer-social-button:hover {
+body:has(.nav-link.active[href="#projects"]) .footer-social-button:hover {
     color: #2348c5;
     background: #e5ebff;
     border-color: #315bea;
 }
 
-body:has(.nav-link.active[href="/events"]) .footer-social-button:hover {
+body:has(.nav-link.active[href="#events"]) .footer-social-button:hover {
     color: #a64b12;
     background: #fff0dc;
     border-color: #e89950;
 }
 
-body:has(.nav-link.active[href="/contact"]) .footer-social-button:hover {
+body:has(.nav-link.active[href="#contact"]) .footer-social-button:hover {
     color: #806b16;
     background: #fff8d9;
     border-color: #d8bd4f;
 }
 
-body:has(.nav-link.active[href="/"]) .footer-social-button:hover {
+body:has(.nav-link.active[href="#home"]) .footer-social-button:hover {
     color: #6840a8;
     background: #f0e8ff;
     border-color: #a786df;
@@ -1241,6 +1266,84 @@ body:has(.nav-link.active[href="/"]) .footer-social-button:hover {
     box-shadow: 0 8px 22px rgb(25 42 80 / 12%);
 }
 
+/* Looser note layouts: equal-height rows and more breathing room. */
+.about-me .info-grid,
+.projects-grid,
+.events-grid,
+.contact-details,
+.posts {
+    align-items: stretch;
+    gap: 32px;
+}
+
+.about-me .info-card,
+.projects-grid .project-card,
+.events-grid .event-card,
+.contact-details .contact-item,
+.posts .post {
+    overflow: visible;
+}
+
+.about-me .info-card:nth-child(3n),
+.projects-grid .project-card:nth-child(3n),
+.events-grid .event-card:nth-child(3n),
+.contact-details .contact-item:nth-child(3n),
+.posts .post:nth-child(3n) {
+    transform: rotate(0.8deg);
+}
+
+.about-me .info-card:nth-child(3n + 2),
+.projects-grid .project-card:nth-child(3n + 2),
+.events-grid .event-card:nth-child(3n + 2),
+.contact-details .contact-item:nth-child(3n + 2),
+.posts .post:nth-child(3n + 2) {
+    transform: rotate(-0.9deg);
+}
+
+.about-me .info-card:nth-child(4n + 1),
+.projects-grid .project-card:nth-child(4n + 1),
+.events-grid .event-card:nth-child(4n + 1),
+.contact-details .contact-item:nth-child(4n + 1),
+.posts .post:nth-child(4n + 1) {
+    scale: 0.96;
+}
+
+.about-me .info-card:nth-child(4n + 2),
+.projects-grid .project-card:nth-child(4n + 2),
+.events-grid .event-card:nth-child(4n + 2),
+.contact-details .contact-item:nth-child(4n + 2),
+.posts .post:nth-child(4n + 2) {
+    scale: 1.04;
+}
+
+.about-me .info-card:nth-child(4n + 3),
+.projects-grid .project-card:nth-child(4n + 3),
+.events-grid .event-card:nth-child(4n + 3),
+.contact-details .contact-item:nth-child(4n + 3),
+.posts .post:nth-child(4n + 3) {
+    scale: 0.92;
+}
+
+.about-me .info-card:nth-child(4n),
+.projects-grid .project-card:nth-child(4n),
+.events-grid .event-card:nth-child(4n),
+.contact-details .contact-item:nth-child(4n),
+.posts .post:nth-child(4n) {
+    scale: 1.02;
+}
+
+.about-me .info-grid > .info-card:hover,
+.about-me .info-grid > .info-card.expanded,
+.projects-grid > .project-card:hover,
+.projects-grid > .project-card.expanded,
+.events-grid > .event-card:hover,
+.events-grid > .event-card.expanded,
+.contact-details > .contact-item:hover,
+.posts > .post:hover {
+    scale: 1;
+    transform: translateY(-3px) rotate(0);
+}
+
 /* Compact, square event notes with a consistent orange palette. */
 .events-grid .event-card {
     aspect-ratio: auto;
@@ -1631,3 +1734,5 @@ body:has(.nav-link.active[href="/"]) .footer-social-button:hover {
         transition-duration: 0.01ms !important;
     }
 }
+
+
