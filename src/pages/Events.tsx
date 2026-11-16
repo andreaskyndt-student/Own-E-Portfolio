@@ -59,10 +59,9 @@ export default function Events() {
                 <p className="lead">MY EXPERIENCES</p>
                 <h1 className="page-title">Events & Experiences</h1>
                 <p className="page-intro">
-                    An overview of the events I attended, the experiences I gained,
-                    and the things I learned along the way. These experiences have helped 
-                    shape my skills, knowledge, and perspective in the field of 
-                    software development.
+                    An overview of the events I attended, the experiences I gained, and the things
+                    I learned along the way. These experiences have helped shape my skills,
+                    knowledge, and perspective in the field of software development.
                 </p>
             </header>
             <section className="events-section">

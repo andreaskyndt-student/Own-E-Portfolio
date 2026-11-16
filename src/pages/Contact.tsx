@@ -8,9 +8,9 @@ export default function Contact() {
             <h1 className="page-title">Contact</h1>
 
             <p className="page-intro">
-                If you have any questions, suggestions, or would like to collaborate on a 
-                project, feel free to reach out to me. I am always open to new 
-                opportunities and connections.
+                If you have any questions, suggestions, or would like to collaborate on a project,
+                feel free to reach out to me. I am always open to new opportunities and
+                connections.
             </p>
 
             <div className="contact-details">

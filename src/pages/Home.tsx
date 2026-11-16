@@ -1,24 +1,44 @@
+import profilePhoto from "../assets/download.jpg";
+
 export default function Home() {
     return (
         <section id="home" className="home container">
-            <p className="lead">WELCOME TO MY PORTFOLIO!</p>
+            <div className="home-hero">
+                <div className="home-copy">
+                    <p className="lead">WELCOME TO MY PORTFOLIO!</p>
 
-            <h1 className="page-title">
-                Hello, my name is <span>Andreas Kyndt.</span>
-            </h1>
+                    <h1 className="page-title">
+                        Hello, my name is <span>Andreas Kyndt.</span>
+                    </h1>
 
-            <p className="home-description">
-                I am a motivated and passionate software developer (student) with a strong
-                interest in technology, design, and building innovative digital solutions.
-            </p>
+                    <p className="home-description">
+                        I am a motivated and passionate software developer (student) with a strong
+                        interest in technology, design, and building innovative digital solutions.
+                    </p>
 
-            <div className="home-actions">
-                <a href="#projects" className="btn btn-primary">
-                    View Projects
-                </a>
-                <a href="#aboutme" className="btn btn-secondary">
-                    About Me
-                </a>
+                    <div className="home-actions">
+                        <a href="#projects" className="btn btn-primary">
+                            View Projects
+                        </a>
+                        <a href="#aboutme" className="btn btn-secondary">
+                            About Me
+                        </a>
+                    </div>
+                </div>
+
+                <aside className="legend-post" aria-labelledby="legend-title">
+                    <div className="photo-post-it">
+                        <img src={profilePhoto} alt="Andreas Kyndt" />
+                    </div>
+                    <h2 id="legend-title">Legend of the site</h2>
+                    <ul>
+                        <li><span className="legend-swatch legend-swatch--purple" aria-hidden="true" />Posts</li>
+                        <li><span className="legend-swatch legend-swatch--green" aria-hidden="true" />Something about myself</li>
+                        <li><span className="legend-swatch legend-swatch--blue" aria-hidden="true" />Projects I built</li>
+                        <li><span className="legend-swatch legend-swatch--orange" aria-hidden="true" />Events I attended</li>
+                        <li><span className="legend-swatch legend-swatch--yellow" aria-hidden="true" />Contact info</li>
+                    </ul>
+                </aside>
             </div>
 
             <section className="posts container">

@@ -42,11 +42,11 @@ export default function Projects() {
                 <p className="lead">MY WORK</p>
                 <h1 className="page-title">Projects</h1>
                 <p className="page-intro">
-                    Here you can find a selection of my personal and school projects. 
-                    Each project showcases my skills, knowledge, and experience in software development. 
-                    I have worked on a variety of projects, ranging from web applications to mobile 
-                    applications, and I am always looking for new challenges and 
-                    opportunities to learn and grow as a developer.
+                    Here you can find a selection of my personal and school projects. Each project
+                    showcases my skills, knowledge, and experience in software development. I have
+                    worked on a variety of projects, ranging from web applications to mobile
+                    applications, and I am always looking for new challenges and opportunities to
+                    learn and grow as a developer.
                 </p>
             </header>
             <section className="projects-section">

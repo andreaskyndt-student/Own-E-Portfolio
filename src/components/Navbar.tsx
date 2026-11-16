@@ -39,10 +39,6 @@ export default function Navbar() {
     return (
         <header className="site-header">
             <nav className="navbar container" aria-label="Main navigation">
-                <a href="#home" className="brand" aria-label="Homepage">
-                    Andreas Kyndt's Portfolio
-                </a>
-
                 <div className="nav-links">
                     {links.map((link) => (
                         <a
